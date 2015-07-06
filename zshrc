@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/home/hangzhang/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -24,7 +24,7 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
-#
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
@@ -45,11 +45,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git autojump)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH="/opt/openmpi/bin/:/usr/local/bin/:/sw/bin:/opt/intel/composer_xe_2013_sp1.0.080/bin/intel64:/opt/intel/composer_xe_2013_sp1.0.080/mpirt/bin/intel64:/opt/intel/composer_xe_2013_sp1.0.080/debugger/gdb/intel64_mic/py26/bin:/opt/intel/composer_xe_2013_sp1.0.080/debugger/gdb/intel64/py26/bin:/opt/intel/composer_xe_2013_sp1.0.080/bin/intel64:/opt/intel/composer_xe_2013_sp1.0.080/bin/intel64_mic:/opt/intel/composer_xe_2013_sp1.0.080/debugger/gui/intel64:/home/hangzhang/software/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/home/hangzhang/bin"
+export PATH="/home/hangzhang/local/clang/bin:/opt/openmpi/bin/:/usr/local/bin/:/sw/bin:/home/hangzhang/software/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/home/hangzhang/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -78,8 +79,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi='vim'
+#
 
 vim() STTY=-ixon command vim "$@"
 
 alias mq='hg -R $(hg root)/.hg/patches'
+alias vi='vim'
+setopt NO_BEEP
+export MY_GPGPUSIM=/home/hangzhang/work_space/gpgpu-sim/
+export CUDA_INSTALL_PATH=/home/hangzhang/local/cuda/4.0
+export CUDAHOME=$CUDA_INSTALL_PATH
+export PATH=/home/hangzhang/local/clang/bin:/home/hangzhang/software/bin:$CUDA_INSTALL_PATH/bin:$PATH
+
+export NVIDIA_COMPUTE_SDK_LOCATION=/home/hangzhang/local/NVIDIA_GPU_Computing_SDK/4.0
+export NVIDIA_CUDA_SDK_LOCATION=$NVIDIA_COMPUTE_SDK_LOCATION
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/hangzhang/software/lib:$CUDA_INSTALL_PATH/lib64:$CUDA_INSTALL_PATH/lib:$NVIDIA_COMPUTE_SDK_LOCATION/C/lib/
+export LIBRARY_PATH=$LIBRARY_PATH:$NVIDIA_COMPUTE_SDK_LOCATION/C/lib/
+
