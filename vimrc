@@ -17,8 +17,10 @@ filetype plugin indent on
 "ignore case when searching string
 set ignorecase
 
-set background=dark
+"set t_Co=256
+"set t_Co=16
 colorscheme solarized
+set background=dark
 "for a.vim
 let g:alternateExtensions_CPP = "inc,h,H,HPP,hpp,hh"
 

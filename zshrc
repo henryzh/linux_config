@@ -89,10 +89,14 @@ setopt NO_BEEP
 export MY_GPGPUSIM=/home/hangzhang/work_space/gpgpu-sim/
 export CUDA_INSTALL_PATH=/home/hangzhang/local/cuda/4.0
 export CUDAHOME=$CUDA_INSTALL_PATH
-export PATH=/home/hangzhang/local/clang/bin:/home/hangzhang/software/bin:$CUDA_INSTALL_PATH/bin:$PATH
+export PATH=/home/hangzhang/global/R/3.1.0/bin:/home/hangzhang/local/gnuplot/5.0/bin:/home/hangzhang/local/clang/bin:/home/hangzhang/software/bin:$CUDA_INSTALL_PATH/bin:$PATH
 
 export NVIDIA_COMPUTE_SDK_LOCATION=/home/hangzhang/local/NVIDIA_GPU_Computing_SDK/4.0
 export NVIDIA_CUDA_SDK_LOCATION=$NVIDIA_COMPUTE_SDK_LOCATION
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/hangzhang/software/lib:$CUDA_INSTALL_PATH/lib64:$CUDA_INSTALL_PATH/lib:$NVIDIA_COMPUTE_SDK_LOCATION/C/lib/
 export LIBRARY_PATH=$LIBRARY_PATH:$NVIDIA_COMPUTE_SDK_LOCATION/C/lib/
 
+export WORK_DIR=/home/hangzhang/work_space/script/projects/gpu_sttram
+export CACHE=/home/hangzhang/work_space/script/projects/gpu_l1cache
+DISABLE_AUTO_UPDATE="true"
+export TERM=xterm-256color
